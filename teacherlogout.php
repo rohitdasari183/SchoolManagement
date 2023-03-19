@@ -1,0 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['login_teacher']))
+{
+	unset($_SESSION['login_teacher']);
+	if(!isset($_SESSION['login_teacher']))
+	{
+		header("Location:parentteachlogin.php");
+	}
+}
+?>
